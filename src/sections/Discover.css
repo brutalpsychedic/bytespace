@@ -1,0 +1,45 @@
+.discover__filters {
+  margin: 36px 0 56px;
+}
+
+.discover__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gutter);
+}
+
+.discover__status {
+  margin-bottom: 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.discover__status button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.discover__empty {
+  padding: 48px 16px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .discover__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .discover__grid {
+    grid-template-columns: 1fr;
+  }
+}

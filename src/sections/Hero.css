@@ -1,0 +1,142 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: clamp(32px, 5vw, 64px);
+  text-align: center;
+}
+
+.hero__title {
+  max-width: 15em;
+  color: #fff;
+  font-size: var(--fs-heading-l); /* 72px */
+}
+
+.hero__text {
+  max-width: 54ch;
+  font-size: var(--text-m);
+  opacity: 0.85;
+}
+
+/* ---------- Photo + lime circle + floating cards ---------- */
+.hero__visual {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 32px, 760px);
+  height: clamp(340px, 40vw, 470px);
+  margin: 28px auto 0;
+}
+
+.hero__circle {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  width: 115%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--lime);
+  transform: translateX(-50%);
+}
+
+.hero__person {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 100%;
+  max-width: none;
+  transform: translateX(-50%);
+}
+
+.hero__card {
+  position: absolute;
+  z-index: 2;
+}
+
+.hero__card--category {
+  top: 14%;
+  left: 4%;
+}
+
+.hero__card--progress {
+  top: 22%;
+  right: 4%;
+}
+
+.hero__card--students {
+  bottom: 12%;
+  left: 0;
+}
+
+/* ---------- Decorative shapes ---------- */
+.hero__shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__shape--squiggle-left {
+  top: 90px;
+  left: -40px;
+  width: 130px;
+  transform: rotate(-25deg);
+}
+
+.hero__shape--torus {
+  bottom: 40px;
+  left: 4%;
+  width: 150px;
+  transform: rotate(-30deg) scaleY(0.75);
+}
+
+.hero__shape--cone {
+  top: 150px;
+  right: 6%;
+  width: 110px;
+  transform: rotate(10deg);
+}
+
+.hero__shape--squiggle-right {
+  right: -40px;
+  bottom: 20px;
+  width: 140px;
+  transform: rotate(15deg);
+}
+
+@media (max-width: 900px) {
+  .hero__shape--cone,
+  .hero__shape--squiggle-left {
+    display: none;
+  }
+
+  .hero__shape--torus {
+    width: 90px;
+  }
+
+  .hero__shape--squiggle-right {
+    width: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__card--category {
+    display: none;
+  }
+
+  .hero__card--progress {
+    top: 6%;
+    right: 0;
+  }
+
+  .hero__card--students {
+    bottom: 6%;
+  }
+}

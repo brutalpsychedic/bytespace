@@ -1,0 +1,83 @@
+.growth__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--gutter) * 2);
+  align-items: center;
+}
+
+/* Stats: label is the <dt>, number is the <dd>; flex-direction puts the number on top. */
+.growth__stats {
+  display: flex;
+  gap: 48px;
+  margin: 36px 0 0;
+}
+
+.growth__stats div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.growth__stats dt {
+  color: var(--muted);
+  font-size: var(--text-s);
+}
+
+.growth__stats dd {
+  margin: 0;
+  color: var(--blue);
+  font-family: var(--font-heading);
+  font-size: var(--fs-heading-s);
+  font-weight: var(--weight-semibold);
+  line-height: var(--lh-heading);
+}
+
+.growth__visual {
+  position: relative;
+  min-height: 460px;
+}
+
+.growth__course {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+}
+
+.growth__person {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 92%;
+}
+
+.growth__progress {
+  position: absolute;
+  top: 48%;
+  right: 6%;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .growth__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .growth__visual {
+    min-height: 380px;
+  }
+
+  .growth__course {
+    width: 220px;
+  }
+
+  .growth__person {
+    height: 80%;
+  }
+
+  .growth__stats {
+    gap: 32px;
+  }
+}
