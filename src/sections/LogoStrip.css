@@ -1,0 +1,21 @@
+.logo-strip {
+  padding-block: 40px;
+  background: var(--surface-alt);
+}
+
+.logo-strip__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 24px 40px;
+}
+
+.partner-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--subtle);
+  font-family: var(--font-heading);
+  font-size: var(--text-l);
+  font-weight: var(--weight-semibold);
+}

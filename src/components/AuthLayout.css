@@ -1,0 +1,223 @@
+.auth {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.auth__inner {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 560px);
+  grid-template-areas:
+    'brand .'
+    'intro card';
+  gap: 24px calc(var(--gutter) * 2);
+  padding-block: 40px 64px;
+}
+
+.auth__brand {
+  grid-area: brand;
+}
+
+.auth__brand .logo__mark {
+  width: 44px;
+  height: 44px;
+}
+
+/* ---------- Left column ---------- */
+.auth__intro {
+  grid-area: intro;
+  padding-top: 8px;
+  color: #fff;
+}
+
+.auth__intro-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-heading-xs);
+  font-weight: var(--weight-semibold);
+}
+
+.auth__intro-text {
+  max-width: 42ch;
+  margin-top: 16px;
+  font-size: var(--text-l); /* Body L */
+  line-height: var(--lh-body);
+  opacity: 0.95;
+}
+
+.auth__showcase {
+  position: relative;
+  max-width: 520px;
+  height: 480px;
+  margin-top: 64px;
+}
+
+.auth__card {
+  position: absolute;
+  pointer-events: none;
+}
+
+.auth__card--back {
+  top: 80px;
+  left: 0;
+  width: 300px;
+}
+
+.auth__card--front {
+  top: 0;
+  left: 100px;
+  z-index: 1;
+  width: 320px;
+}
+
+.auth__students {
+  position: absolute;
+  bottom: 0;
+  left: 190px;
+  z-index: 2;
+}
+
+.auth__shape {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.auth__shape--torus {
+  top: 30px;
+  left: 50px;
+  width: 110px;
+  transform: rotate(-30deg) scaleY(0.8);
+}
+
+.auth__shape--cone {
+  bottom: -10px;
+  left: -10px;
+  width: 140px;
+  transform: rotate(-12deg);
+}
+
+.auth__shape--squiggle {
+  right: 30px;
+  bottom: 50px;
+  width: 90px;
+  transform: rotate(-50deg);
+}
+
+/* ---------- Right column: the white card ---------- */
+.auth-card {
+  grid-area: card;
+  display: flex;
+  flex-direction: column;
+  min-height: 640px;
+  padding: clamp(28px, 5vw, 64px) clamp(24px, 5vw, 72px);
+  border-radius: 28px;
+  background: var(--surface);
+}
+
+/* The card is white, so switch back from the lime (blue-background) focus ring. */
+.auth-card :focus-visible {
+  outline-color: var(--focus);
+}
+
+.auth-card__eyebrow {
+  color: var(--blue);
+  font-size: var(--text-l);
+}
+
+.auth-card__title {
+  margin-bottom: 40px;
+  font-size: var(--fs-heading-m); /* 44px */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.auth-form__submit {
+  align-self: flex-end;
+  margin-top: 12px;
+}
+
+.auth-form__status {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--secondary-100);
+  color: var(--ink);
+  font-size: var(--text-s);
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 48px 0 32px;
+  color: var(--muted);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.auth-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.auth-social button {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.auth-social button:hover {
+  border-color: var(--ink);
+}
+
+.auth-card__switch {
+  margin-top: auto;
+  padding-top: 48px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.auth-card__switch a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.auth-card__switch a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Tablet / mobile: single column, drop the collage ---------- */
+@media (max-width: 960px) {
+  .auth__inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'brand'
+      'intro'
+      'card';
+    max-width: 600px;
+  }
+
+  .auth__showcase {
+    display: none;
+  }
+
+  .auth-card {
+    min-height: 0;
+  }
+}

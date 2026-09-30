@@ -1,0 +1,42 @@
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+/* Label S: Satoshi 14px, 120% line height. */
+.category-pill {
+  padding: 8px 18px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--surface-alt);
+  color: var(--text);
+  font-size: var(--text-s);
+  line-height: var(--lh-label);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.category-pill:hover {
+  background: var(--surface-hover);
+}
+
+.category-pill.is-active {
+  background: var(--lime);
+  color: var(--ink);
+  font-weight: var(--weight-medium);
+}
+
+.category-pill--more {
+  background: transparent;
+  color: var(--blue);
+  font-weight: var(--weight-medium);
+}
+
+.category-pill--more:hover {
+  background: transparent;
+  text-decoration: underline;
+}

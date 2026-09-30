@@ -1,0 +1,30 @@
+.avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-stack li {
+  display: flex;
+  margin-left: calc(var(--stack-size) * -0.3);
+}
+
+.avatar-stack li:first-child {
+  margin-left: 0;
+}
+
+.avatar-stack .avatar,
+.avatar-stack__more {
+  border: 2px solid #fff;
+}
+
+.avatar-stack__more {
+  display: inline-grid;
+  place-items: center;
+  width: var(--stack-size);
+  height: var(--stack-size);
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-size: calc(var(--stack-size) * 0.34);
+  font-weight: var(--weight-semibold);
+}

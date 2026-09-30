@@ -1,0 +1,134 @@
+.course-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  /* Lets the card shrink inside grid columns so the long, no-wrap title truncates instead of overflowing. */
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  /* Set explicitly so the card looks the same on blue sections (which use white text). */
+  color: var(--text);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(7, 30, 95, 0.12);
+}
+
+.course-card__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-alt);
+}
+
+.course-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-card__chips {
+  position: absolute;
+  inset: auto 8px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Label XS */
+.course-card__chips li {
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(6px);
+  color: var(--text);
+  font-size: var(--text-xs);
+  line-height: var(--lh-label);
+}
+
+.course-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 4px 4px;
+}
+
+.course-card__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Heading XS — long titles truncate with "…" like in the design. */
+.course-card__title {
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--fs-heading-xs);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.course-card__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: var(--text-l);
+  line-height: var(--lh-label);
+}
+
+.course-card__rating svg {
+  color: var(--lime-strong);
+}
+
+.course-card__author {
+  margin-top: -6px;
+  color: var(--muted);
+  font-size: var(--text-xs);
+}
+
+.course-card__author span {
+  color: var(--blue);
+}
+
+.course-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Label S */
+.course-card__level {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-alt);
+  font-size: var(--text-s);
+  line-height: var(--lh-label);
+}
+
+.course-card__price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-heading-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--blue);
+}
+
+.course-card__price small {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  color: var(--muted);
+}

@@ -1,0 +1,93 @@
+.create-manage {
+  padding-top: 0;
+}
+
+.create-manage__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--gutter) * 2);
+  align-items: center;
+}
+
+.create-manage__visual {
+  position: relative;
+  min-height: 480px;
+}
+
+.create-manage__person {
+  position: absolute;
+  bottom: 0;
+  left: 14%;
+  height: 100%;
+}
+
+.create-manage__revenue,
+.create-manage__ytd,
+.create-manage__students {
+  position: absolute;
+  z-index: 2;
+}
+
+.create-manage__revenue {
+  top: 4%;
+  left: 0;
+}
+
+.create-manage__ytd {
+  top: 32%;
+  left: 0;
+}
+
+.create-manage__students {
+  right: 6%;
+  bottom: 12%;
+}
+
+.create-manage__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.create-manage__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-size: var(--text-m);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+}
+
+.create-manage__check {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .create-manage__inner {
+    grid-template-columns: 1fr;
+  }
+
+  /* Text first on mobile reads better than a big image first. */
+  .create-manage__visual {
+    order: 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .create-manage__visual {
+    min-height: 400px;
+  }
+
+  .create-manage__person {
+    left: 20%;
+    height: 90%;
+  }
+}

@@ -1,0 +1,35 @@
+.path-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: var(--text-m);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.path-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--lime-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.path-card__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--lime);
+}

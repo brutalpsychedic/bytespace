@@ -1,0 +1,73 @@
+/* Button text uses the Label style: Satoshi Medium, 120% line height. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.btn--sm {
+  padding: 8px 18px;
+  font-size: var(--text-s);
+}
+
+.btn--md {
+  padding: 12px 28px;
+  font-size: var(--text-m);
+}
+
+.btn--lg {
+  padding: 16px 36px;
+  font-size: var(--text-l);
+}
+
+.btn--lime {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.btn--lime:hover {
+  background: var(--lime-strong);
+  transform: translateY(-1px);
+}
+
+.btn--outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+.btn--outline-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn--ghost-light {
+  background: transparent;
+  color: #fff;
+}
+
+.btn--ghost-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn--outline {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.btn--outline:hover {
+  border-color: var(--ink);
+}

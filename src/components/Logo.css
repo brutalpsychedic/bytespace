@@ -1,0 +1,25 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logo__mark {
+  width: 32px;
+  height: 32px;
+}
+
+.logo__text {
+  font-family: var(--font-heading);
+  font-size: var(--fs-heading-xs);
+  font-weight: 700;
+}
+
+.logo--light .logo__text {
+  color: #fff;
+}
+
+.logo--dark .logo__text {
+  color: var(--ink);
+}

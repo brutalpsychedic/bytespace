@@ -1,0 +1,42 @@
+/* Label M for the label, Body M for the input text. */
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: var(--text-m);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+}
+
+.form-field input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  font-size: var(--text-m);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-field input::placeholder {
+  color: var(--subtle);
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: var(--blue);
+  /* primary-800 (#003be2) at 15% opacity */
+  box-shadow: 0 0 0 3px rgba(0, 59, 226, 0.15);
+}
+
+.form-field.has-error input {
+  border-color: var(--error);
+}
+
+.form-field__error {
+  margin-top: 6px;
+  color: var(--error);
+  font-size: var(--text-xs);
+}
