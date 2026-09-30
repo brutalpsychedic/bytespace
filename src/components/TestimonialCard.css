@@ -1,0 +1,27 @@
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.testimonial-card__name {
+  font-size: var(--fs-heading-xs);
+}
+
+.testimonial-card__role {
+  color: var(--blue);
+  font-size: var(--text-s);
+}
+
+.testimonial-card__quote {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-s);
+  line-height: var(--lh-body);
+}
