@@ -2,7 +2,7 @@
 
 Landing page, login and signup pages for **ByteSpace**, an online course platform, built from the provided Figma design.
 
-**Live demo:** _add your Vercel link here_
+**Live demo:** (https://bytespace-nine-opal.vercel.app/)
 
 ## Tech stack
 
